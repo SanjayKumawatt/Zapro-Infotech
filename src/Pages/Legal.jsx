@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ShieldAlert, Gavel, Scale, Lock, FileSearch, Mail, Info } from 'lucide-react';
+import { ShieldAlert, Gavel, Scale, Lock, FileSearch, Info } from 'lucide-react';
 
 const Legal = () => {
   // Scroll to top on mount
@@ -11,40 +11,40 @@ const Legal = () => {
   const legalContent = [
     {
       id: "data-practices",
-      title: "Data Practices & Personal Integrity",
+      title: "Data Practices & Telemetry",
       icon: ShieldAlert,
-      text: "ZAPRO INFOTECH PRIVATE LIMITED operates as an early-stage startup with a strict policy of data minimization. We do not engage in the broad harvesting of user data. Any information transmitted through our 'Reach Us' portals-including names, official email addresses, and technical project requirements-is utilized strictly for the initiation of professional dialogue and structural planning. We do not sell, distribute, or lease your information to third-party marketing entities. Our data storage protocols are aimed at maintaining absolute confidentiality for our prospective partners."
+      text: "ZAPRO INFOTECH PRIVATE LIMITED operates as an active infrastructure provider with a strict policy of data minimization. We do not engage in the broad harvesting of user data. Information transmitted through our API endpoints, enterprise portals, and support channels is utilized strictly for operational continuity, active session authentication, and platform security. We do not sell, distribute, or lease your telemetry or payload data to third-party entities. Our data storage protocols ensure absolute confidentiality for all active deployments on our network."
     },
     {
       id: "structural-security",
-      title: "Structural Security Commitment",
+      title: "Active Security Commitment",
       icon: Lock,
-      text: "As we are currently in the development phase of our various technological frameworks, we are committed to applying appropriate, modern security measures upon the official launch of any digital platform we engineer. Our focus remains on the deployment of encrypted transaction tunnels and secure database architectures. While no digital system can be claimed as impenetrable, our engineering intent is to prioritize the protection of sensitive organizational data from the foundation upwards."
+      text: "Security is actively enforced across our entire ecosystem. We operate continuous threat mitigation, end-to-end encryption, and isolated VPC architecture. Our network natively handles DDoS mitigation, Web Application Firewall (WAF) filtering, and payload encryption at the edge. We prioritize the protection of sensitive organizational data from the hardware foundation upwards, ensuring strict compliance and operational stability for all live enterprise workloads."
     },
     {
       id: "intellectual-property",
-      title: "Intellectual & Digital Property",
+      title: "Infrastructure & Digital Property",
       icon: FileSearch,
-      text: "All content, code architectures, visual assets, and logical frameworks displayed on zapropvtltd.in are the exclusive property of ZAPRO INFOTECH PRIVATE LIMITED. Unauthorized replication, modification, or distribution of these digital assets is strictly prohibited. Our proposed solutions and proprietary methodologies are protected under the intellectual property framework of India. Engagement with our company does not grant automatic rights to our underlying technology unless explicitly stated in a signed Master Service Agreement."
+      text: "All deployed infrastructure, API schemas, compiled assets, and core operational logic accessible via zapropvtltd.in are the exclusive property of ZAPRO INFOTECH PRIVATE LIMITED. Unauthorized replication, reverse engineering, or distribution of these digital assets is strictly prohibited. Engagement with our platform grants access to our services per your active Service Level Agreement (SLA), but does not grant automatic rights to our underlying proprietary engine or source code."
     },
     {
       id: "terms-of-usage",
-      title: "Terms of Digital Usage",
+      title: "API & Platform Usage Terms",
       icon: Gavel,
-      text: "By accessing this domain, you acknowledge that ZAPRO INFOTECH is an early-stage startup. The services described are proposed technological solutions currently under our engineering roadmap. We reserve the right to modify our service offerings, technical specifications, and internal policies without prior notice. Use of this website for any unlawful activity, or any attempt to bypass our structural security layers, will result in immediate termination of communication and potential legal action under the IT Act."
+      text: "By accessing this domain and integrating with our infrastructure, you agree to our operational terms. We provide high-performance cloud ecosystems and reserve the right to deprecate legacy endpoints, modify routing rules, and update rate limits to maintain network integrity. Use of this platform for malicious payloads, unauthorized penetration testing, or attempting to bypass our security layers will result in immediate API key revocation, instance termination, and potential legal action under the IT Act."
     },
     {
       id: "jurisdiction",
       title: "Jurisdictional Framework",
       icon: Scale,
-      text: "This legal framework and the use of the ZAPRO INFOTECH digital ecosystem are governed by the laws of India. Any legal disputes, claims, or proceedings arising from the use of our website or services are subject to the exclusive jurisdiction of the courts located in Himatnagar, Gujarat. Users accessing this site from outside India do so at their own initiative and are responsible for compliance with local laws where applicable."
+      text: "This legal framework and the use of the ZAPRO INFOTECH digital ecosystem are governed by the laws of India. Any legal disputes, claims, or proceedings arising from the use of our infrastructure or APIs are subject to the exclusive jurisdiction of the courts located in Himatnagar, Gujarat. Enterprises routing traffic through our network from outside India do so at their own initiative and are responsible for compliance with their local data sovereignty laws."
     }
   ];
 
   return (
-    <div className="bg-white min-h-screen - pb-0 font-sans">
+    <div className="bg-white min-h-screen pb-0 font-sans">
       
-      {/* 1. Impactful Legal Hero Section (No Dates) */}
+      {/* 1. Impactful Legal Hero Section */}
       <section className="relative bg-[#0d2b5e] text-white py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Architectural Background Pattern */}
         <div className="absolute inset-0 opacity-10">
@@ -70,7 +70,7 @@ const Legal = () => {
               Data Practices & <br/>Legal Framework
             </h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed font-light">
-              This document outlines the structural and legal boundaries governing the interaction between ZAPRO INFOTECH and its digital visitors.
+              This document outlines the operational terms, strict security boundaries, and API usage policies governing the ZAPRO INFOTECH infrastructure.
             </p>
           </motion.div>
         </div>
@@ -105,7 +105,7 @@ const Legal = () => {
             ))}
           </div>
 
-          {/* 3. Official Entity Block (No Dates) */}
+          {/* 3. Official Entity Block */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -121,7 +121,7 @@ const Legal = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-gray-400 font-medium uppercase tracking-widest">
                 <div>
                   <p className="text-[#00b4d8] mb-1">Status</p>
-                  <p className="text-white">Early-Stage Startup</p>
+                  <p className="text-white">Active Infrastructure Provider</p>
                 </div>
                 <div>
                   <p className="text-[#00b4d8] mb-1">Domain</p>
@@ -131,16 +131,16 @@ const Legal = () => {
 
               <div className="mt-12 pt-10 border-t border-white/10">
                 <p className="text-xs mb-4">FOR OFFICIAL LEGAL INQUIRIES:</p>
-                <a href="mailto:contact@zapropvtltd.in" className="text-xl md:text-2xl font-bold text-white hover:text-[#00b4d8] transition-colors">
+                <div className="text-xl md:text-2xl font-bold text-white hover:text-[#00b4d8] transition-colors">
                   contact@zapropvtltd.in
-                </a>
+                </div>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* 4. Minimal Final Bar (Strictly No Dates) */}
+      {/* 4. Minimal Final Bar */}
       <section className="py-12 bg-white text-center border-t border-gray-50">
         <p className="text-gray-400 text-[10px] font-bold uppercase tracking-[0.5em]">
           ZAPRO INFOTECH PRIVATE LIMITED | ALL RIGHTS RESERVED
