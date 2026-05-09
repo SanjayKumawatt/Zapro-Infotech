@@ -15,6 +15,13 @@ import SEO from './Pages/SEO'
 import ECommerce from './Pages/Ecommerce'
 import Legal from './Pages/Legal'
 import MobileAppDevelopment from './Pages/MobileAppDevelopment'
+import CorePlatform from './Pages/CorePlatform'
+import AIInfrastructure from './Pages/AiInfrastructure'
+import CloudPlatform from './Pages/CloudPlatform'
+import DeveloperTools from './Pages/Developertool'
+import WorkflowsPlatform from './Pages/WorkFlow'
+import SecurityPlatform from './Pages/SecurityPlatform'
+import PlatformHub from './Pages/Platform'
 // import MobileAppDevelopment from './Pages/WebDesign'
 
 const App = () => {
@@ -29,10 +36,10 @@ const App = () => {
           path:"/",
           element:<Home/>
         }, 
-        {
-          path:"/solutions",
-          element:<Solutions/>
-        }, 
+        // {
+        //   path:"/solutions",
+        //   element:<Solutions/>
+        // }, 
         {
           path:"/company",
           element:<Company/>
@@ -41,38 +48,38 @@ const App = () => {
           path:"/reach-us",
           element:<ReachUs/>
         }, 
+        
         {
-          path:"/solutions/web-development",
-          element:<WebDevelopment/>
+          path:"/platform/core",
+          element:<CorePlatform/>
+        }, 
+        
+        {
+          path:"/platform/ai-infrastructure",
+          element:<AIInfrastructure/>
         }, 
         {
-          path:"/solutions/graphic-design",
-          element:<GraphicDesign/>
+          path:"/platform/cloud",
+          element:<CloudPlatform/>
         }, 
         {
-          path:"/solutions/wordpress-development",
-          element:<WordPressDevelopment/>
+          path:"/platform/developer-tools",
+          element:<DeveloperTools/>
         }, 
         {
-          path:"/solutions/web-hosting",
-          element:<WebHosting/>
+          path:"/platform/workflows",
+          element:<WorkflowsPlatform/>
         }, 
         {
-          path:"/solutions/web-design",
-          element:<WebDesign/>
+          path:"/platform/security",
+          element:<SecurityPlatform/>
         }, 
         {
-          path:"/solutions/mobile-app-development",
-          element:<MobileAppDevelopment/>
+          path:"/platform",
+          element:<PlatformHub/>
         }, 
-        {
-          path:"/solutions/seo",
-          element:<SEO/>
-        }, 
-        {
-          path:"/solutions/e-commerce",
-          element:<ECommerce/>
-        }, 
+        
+        
         {
           path:"/legal",
           element:<Legal/>

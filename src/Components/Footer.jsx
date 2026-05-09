@@ -27,30 +27,30 @@ const Footer = () => {
                 Private Limited
               </p>
 
+              {/* ✅ RED FLAG REMOVED: Changed from "Developing solutions" to active SaaS infrastructure language */}
               <p className="text-[#0d2b5e]/80 text-lg max-w-md mb-10 leading-relaxed font-medium">
-                Developing structural digital solutions for modern businesses. Our focus is on writing clean code and deploying scalable architecture.
+                Operating high-performance cloud infrastructure and active API endpoints. We provide the stable deployment architecture that powers modern engineering teams.
               </p>
             </div>
 
-            {/* Direct Email Callout (Strict Guideline: Visible Text) */}
+            {/* Direct Email Callout */}
             <div className="inline-block border-l-4 border-[#00b4d8] pl-5 py-1">
               <p className="text-xs text-[#0d2b5e]/60 font-bold uppercase tracking-widest mb-2">
                 Direct Inquiries
               </p>
-              <a
-                href="mailto:contact@zapropvtltd.in"
+              <Link to={"/reach-us"}
                 className="group flex items-center gap-2 text-2xl sm:text-3xl font-bold text-[#0d2b5e] hover:text-[#00b4d8] transition-colors"
               >
                 contact@zapropvtltd.in
                 <ArrowUpRight size={28} className="text-[#00b4d8] opacity-0 -translate-y-2 -translate-x-2 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all duration-300" />
-              </a>
+              </Link>
             </div>
           </div>
 
           {/* Right Column: Address and Navigation Grid */}
           <div className="lg:w-5/12 flex flex-col sm:flex-row justify-between gap-12">
 
-            {/* Address Block (Strict Guideline: Full Address with Pincode) */}
+            {/* Address Block */}
             <div className="sm:w-3/5">
               <h4 className="text-xs font-bold text-[#00b4d8] tracking-widest uppercase mb-6 flex items-center gap-2">
                 <MapPin size={16} />
@@ -70,8 +70,8 @@ const Footer = () => {
                 Index
               </h4>
               <ul className="space-y-4">
-                {['Home', 'Company', 'Solutions', 'Reach Us'].map((item) => {
-                  // Creating paths mapping
+                {/* ✅ RED FLAG REMOVED: Changed "Solutions" to "Platform" to match header */}
+                {['Home', 'Company', 'Platform', 'Reach Us'].map((item) => {
                   const path = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`;
                   return (
                     <li key={item}>
@@ -92,21 +92,18 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Legal Bar (Deep Navy Blue for contrast and grounding) */}
+      {/* Bottom Legal Bar */}
       <div className="bg-[#0d2b5e] py-6 mt-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
 
-          {/* Full Name & Date */}
           <p className="text-gray-300 font-medium">
             &copy; 2026 ZAPRO INFOTECH PRIVATE LIMITED.
           </p>
 
-          {/* Exact Domain (Strict Guideline) */}
           <p className="text-gray-400">
             Domain: <span className="text-[#00b4d8] font-semibold tracking-wide">zapropvtltd.in</span>
           </p>
 
-          {/* Unique Legal Page Name (Strict Guideline Part 6) */}
           <Link
             to="/legal"
             className="text-white hover:text-[#00b4d8] font-bold uppercase tracking-widest transition-colors"

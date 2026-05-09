@@ -35,12 +35,12 @@ const ReachUs = () => {
 
   // Reset Form Functionality
   const handleBackToForm = () => {
-    setFormData(initialFormState); // Form fields ko empty karne ke liye
+    setFormData(initialFormState); 
     setIsSubmitted(false);
   };
 
   return (
-    <div className="bg-white min-h-screen - pb-0">
+    <div className="bg-white min-h-screen pb-0">
       
       {/* 1. Proper Hero Section with Image Background */}
       <section className="relative bg-[#0d2b5e] text-white py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -56,11 +56,12 @@ const ReachUs = () => {
             <span className="inline-block px-4 py-1 border border-[#00b4d8] text-[#00b4d8] rounded-full text-xs font-bold tracking-widest uppercase mb-6 bg-[#0d2b5e]/50 backdrop-blur-sm">
               Connect With Us
             </span>
+            {/* ✅ RED FLAG REMOVED: Shifted from "New Projects" to Platform Engineering & Enterprise Support */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Initiate Technical Dialogue.
+              Connect with Platform Engineering.
             </h1>
             <p className="text-lg text-gray-300 leading-relaxed">
-              Zapro Infotech is actively reviewing inquiries for new structural technology projects. Connect with our engineering core directly.
+              Reach out for enterprise SLAs, dedicated deployment nodes, or custom API rate limits. Our infrastructure team is on standby to support your active workloads.
             </p>
           </motion.div>
         </div>
@@ -114,7 +115,7 @@ const ReachUs = () => {
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-[#0d2b5e]/60 uppercase tracking-widest mb-1">Standard Response</h4>
-                      <p className="text-[#0d2b5e] font-semibold text-sm">We respond within one working day.</p>
+                      <p className="text-[#0d2b5e] font-semibold text-sm">System tickets are reviewed within one working day.</p>
                     </div>
                   </div>
                 </div>
@@ -127,7 +128,8 @@ const ReachUs = () => {
               >
                 <p className="text-sm leading-relaxed font-light">
                   <strong className="font-bold text-[#00b4d8] block mb-2 uppercase tracking-wider text-xs">Early-Stage Startup Protocol</strong>
-                  Our engineering team handles all initial project inquiries directly. This ensures that technical constraints and opportunities are identified correctly from the very first dialogue.
+                  {/* ✅ RED FLAG REMOVED: Now talks about Support Tickets instead of Project Inquiries */}
+                  Our core engineering team reviews all enterprise and support tickets directly. This ensures that infrastructure constraints and API issues are resolved without passing through tiered support delays.
                 </p>
               </motion.div>
 
@@ -149,7 +151,8 @@ const ReachUs = () => {
                     >
                       <h3 className="text-2xl font-bold text-[#0d2b5e] mb-6 flex items-center gap-3">
                         <TerminalSquare size={24} className="text-[#00b4d8]" />
-                        Submit Project Details
+                        {/* ✅ RED FLAG REMOVED: "Submit Request" instead of "Submit Project Details" */}
+                        Submit Support / Access Request
                       </h3>
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -172,25 +175,27 @@ const ReachUs = () => {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-xs font-bold text-[#0d2b5e] uppercase tracking-wider">Requirement Type</label>
+                        <label className="text-xs font-bold text-[#0d2b5e] uppercase tracking-wider">Request Type</label>
                         <select 
                           required name="requirement" value={formData.requirement} onChange={handleChange}
                           className="w-full bg-gray-50 border border-gray-200 focus:border-[#00b4d8] focus:bg-white outline-none py-3 px-4 rounded-sm transition-colors font-medium text-sm cursor-pointer"
                         >
                           <option value="" disabled hidden>Select an option</option>
-                          <option value="web">Web Architecture Development</option>
-                          <option value="mobile">Mobile Application Ecosystem</option>
-                          <option value="design">Interface / Graphic Design</option>
-                          <option value="other">Other Technical Query</option>
+                          {/* ✅ GREEN FLAG: Changed options to SaaS/Infrastructure specific topics */}
+                          <option value="enterprise">Enterprise Infrastructure Setup</option>
+                          <option value="api_limit">API Key & Rate Limit Expansion</option>
+                          <option value="ai_workflow">AI Pipeline Integration</option>
+                          <option value="support">Technical Support / Bug Report</option>
                         </select>
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-xs font-bold text-[#0d2b5e] uppercase tracking-wider">Describe Your Requirements</label>
+                        {/* ✅ RED FLAG REMOVED: Adjusted wording for technical context */}
+                        <label className="text-xs font-bold text-[#0d2b5e] uppercase tracking-wider">Request Details</label>
                         <textarea 
                           required rows="5" name="message" value={formData.message} onChange={handleChange}
                           className="w-full bg-gray-50 border border-gray-200 focus:border-[#00b4d8] focus:bg-white outline-none py-3 px-4 rounded-sm transition-colors font-medium text-sm resize-none"
-                          placeholder="Technical details of your project..."
+                          placeholder="Please provide details about your deployment scale, expected API volume, or specific support issue..."
                         ></textarea>
                       </div>
 
@@ -200,12 +205,12 @@ const ReachUs = () => {
                         disabled={isSending}
                         className={`w-full bg-[#0d2b5e] text-white py-4 px-8 font-bold flex items-center justify-center gap-3 rounded-sm transition-all duration-300 group ${isSending ? 'opacity-70 cursor-not-allowed' : 'hover:bg-[#00b4d8]'}`}
                       >
-                        {isSending ? 'Processing...' : 'Send My Question'}
+                        {isSending ? 'Processing...' : 'Send to Engineering'}
                         {!isSending && <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
                       </button>
                     </motion.form>
                   ) : (
-                    /* Elegant Inline Success State (Fields are cleared behind the scenes) */
+                    /* Elegant Inline Success State */
                     <motion.div 
                       key="success"
                       initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
@@ -214,16 +219,16 @@ const ReachUs = () => {
                       <div className="w-20 h-20 bg-[#eaf6f9] text-[#00b4d8] rounded-full flex items-center justify-center mx-auto mb-6">
                         <CheckCircle2 size={48} />
                       </div>
-                      <h3 className="text-3xl font-bold text-[#0d2b5e] mb-4">Inquiry Received</h3>
+                      <h3 className="text-3xl font-bold text-[#0d2b5e] mb-4">Request Logged</h3>
                       <p className="text-gray-600 mb-8 max-w-sm mx-auto leading-relaxed">
-                        Your technical inquiry has been logged successfully. Our engineering team will review it and respond within one working day.
+                        Your technical inquiry has been submitted successfully. Our infrastructure team will review it and follow up within one working day.
                       </p>
                       <button 
                         onClick={handleBackToForm}
                         className="text-[#0d2b5e] font-bold flex items-center gap-2 mx-auto hover:text-[#00b4d8] transition-colors border-b-2 border-transparent hover:border-[#00b4d8] pb-1"
                       >
                         <RotateCcw size={16} />
-                        Back to Technical Form
+                        Submit Another Ticket
                       </button>
                     </motion.div>
                   )}

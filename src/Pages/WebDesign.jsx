@@ -32,7 +32,7 @@ const WebDesign = () => {
     },
     {
       title: "Conversion-Focused UI",
-      desc: "Interface design is a sales tool. We are conceptualizing UI elements—from button placement to typography scale—designed to guide the user naturally toward specific engagement and conversion milestones.",
+      desc: "Interface design is a sales tool. We are conceptualizing UI elements-from button placement to typography scale-designed to guide the user naturally toward specific engagement and conversion milestones.",
       icon: Focus
     },
     {

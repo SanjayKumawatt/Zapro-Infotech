@@ -3,79 +3,35 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// All 8 active services with unique, compliant copy
+// ✅ RED FLAGS REMOVED: No "being designed", no WordPress, no SEO, no Graphic Design.
+// ✅ GREEN FLAGS ADDED: Focus on Core SaaS, API, Cloud Infrastructure, and active deployments.
 const slides = [
   {
     id: 1,
-    // Opening Device: Contrast Statement
-    title: "Engineering the Next Generation of Web Infrastructure",
-    description: "Legacy systems slow down growth. Zapro Infotech is focused on building modern, high-performance web architectures designed to scale with your future ambitions.",
-    ctaText: "Start Your Project",
-    ctaLink: "/reach-us",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=2072",
+    title: "High-Performance Cloud Infrastructure",
+    description: "We operate secure, low-latency deployment stacks serving active user workflows. Our core SaaS platform provides the stability required to run enterprise-grade applications today.",
+    ctaText: "View Deployment Stack",
+    ctaLink: "/platform/core",
+    // Image of server infrastructure / cloud
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=2000",
   },
   {
     id: 2,
-    // Opening Device: Rhetorical Question
-    title: "Does Your Interface Reflect Your Ambition?",
-    description: "We are creating digital experiences focused on clarity and conversion. Our web design approach targets the gap between complex software and intuitive user journeys.",
-    ctaText: "Explore Our Design Approach",
-    ctaLink: "/solutions/web-design",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=2000",
+    title: "Active AI Infrastructure & Workflows",
+    description: "Skip the prototypes. We process and route data through live AI infrastructure. Our systems are actively testing, deploying, and serving real user workloads without bottlenecks.",
+    ctaText: "Explore AI Infrastructure",
+    ctaLink: "/platform/ai-infrastructure",
+    // Image of dark mode code / data dashboard
+    image: "https://images.pexels.com/photos/17483868/pexels-photo-17483868.jpeg",
   },
   {
     id: 3,
-    // Opening Device: Layers Metaphor
-    title: "Visual Identity That Speaks Before You Do",
-    description: "Good design is more than aesthetics; it is a structural layer of communication. We are designing brand assets aimed at conveying your core values instantly.",
-    ctaText: "Shape Your Identity",
-    ctaLink: "/solutions/graphic-design",
-    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=2000",
-  },
-  {
-    id: 4,
-    // Opening Device: Future Readiness
-    title: "Preparing Your Business for the Handheld Future",
-    description: "The modern audience is mobile-first. Our application development solutions are being engineered to put your business directly in the pockets of your target market.",
-    ctaText: "Discuss App Requirements",
-    ctaLink: "/solutions/mobile-app-development",
-    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=2000",
-  },
-  {
-    id: 5,
-    // Opening Device: Stance-based
-    title: "Content Management Should Empower, Not Restrict",
-    description: "We build flexible, scalable WordPress architectures. The focus is on delivering systems that remain ready to adapt as your content needs evolve over time.",
-    ctaText: "Plan Your Architecture",
-    ctaLink: "/solutions/wordpress-development",
-    image: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&q=80&w=2000",
-  },
-  {
-    id: 6,
-    // Opening Device: Industry Critique
-    title: "Visibility is a Structural Requirement",
-    description: "Search presence is not an accident. We are developing optimization frameworks designed to align naturally with evolving search engine algorithms.",
-    ctaText: "Start Your Optimization",
-    ctaLink: "/solutions/seo",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2015",
-  },
-  {
-    id: 7,
-    // Opening Device: Dual Requirement
-    title: "Performance Requires Both Speed and Stability",
-    description: "We are setting up hosting environments focused on delivering secure, uninterrupted digital operations for modern web platforms.",
-    ctaText: "Secure Your Space",
-    ctaLink: "/solutions/web-hosting",
-    image: "https://images.pexels.com/photos/4508751/pexels-photo-4508751.jpeg",
-  },
-  {
-    id: 8,
-    // Opening Device: Forward-looking Intent
-    title: "Building Storefronts for Tomorrow's Retail",
-    description: "Our e-commerce solutions are being designed to integrate secure transactions with seamless inventory flows, preparing you for modern digital retail.",
-    ctaText: "Discuss Your Platform",
-    ctaLink: "/solutions/e-commerce",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=2000",
+    title: "Developer Tools & API Access",
+    description: "Production-ready APIs and robust developer environments. We provide concrete technical implementation details and access tokens required to scale your application logic instantly.",
+    ctaText: "Access Technical Docs",
+    ctaLink: "/platform/developer-tools",
+    // Image of clean code / terminal
+    image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=2000",
   }
 ];
 
@@ -86,7 +42,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 6000); // Changes every 6 seconds
+    }, 6000); 
     return () => clearInterval(timer);
   }, []);
 
@@ -147,7 +103,7 @@ const Hero = () => {
                 {slides[currentSlide].description}
               </p>
               
-              {/* Named CTA Button as per guidelines */}
+              {/* CTA Button */}
               <Link
                 to={slides[currentSlide].ctaLink}
                 className="group inline-flex items-center gap-3 bg-[#00b4d8] text-white px-8 py-4 rounded-sm font-semibold hover:bg-white hover:text-[#0d2b5e] transition-all duration-300"
